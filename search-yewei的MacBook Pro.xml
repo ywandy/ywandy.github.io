@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[解决linux下nodejs中watch文件最大数异常]]></title>
-    <url>%2F%E8%A7%A3%E5%86%B3linux%E4%B8%8Bnodejs%E4%B8%ADwatch%E6%96%87%E4%BB%B6%E6%9C%80%E5%A4%A7%E6%95%B0%E5%BC%82%E5%B8%B8.html</url>
-    <content type="text"><![CDATA[解决在linux下使用nodejs出现的ENOSPC: System limit for number of file watchers reached 问题错误：ENOSPC: System limit for number of file watchers reached 原因：linux系统中限制了用户可以watch文件变更的最大数，因此需要通过sysctl.conf进行更改数值 解决方案：1echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p 如果是archlinux：在文件123```bashfs.inotify.max_user_watches=524288]]></content>
-      <categories>
-        <category>技巧总结</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>nodejs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[解决centos的ssh链接慢问题]]></title>
     <url>%2F%E8%A7%A3%E5%86%B3centos%E7%9A%84ssh%E9%93%BE%E6%8E%A5%E6%85%A2%E9%97%AE%E9%A2%98.html</url>
     <content type="text"><![CDATA[以下提供2种解决思路：一、关闭dns反向解析(能达到显著的加速效果):在linux中，默认开启了ssh反向dns解析，这个会消耗大量时间， 12# vi /etc/ssh/sshd_configUseDNS=no 二、关闭server的gss认证:在authentication gssapi-with-mic有很大的可能出现问题，因此关闭GSS认证可以提高ssh连接速度。 12# vi /etc/ssh/sshd_configGSSAPIAuthentication no]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.ywandy.top/"/>
-  <updated>2019-04-16T02:10:02.021Z</updated>
+  <updated>2019-04-16T02:15:44.910Z</updated>
   <id>https://blog.ywandy.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决linux下nodejs中watch文件最大数异常</title>
+    <link href="https://blog.ywandy.top/%E8%A7%A3%E5%86%B3linux%E4%B8%8Bnodejs%E4%B8%ADwatch%E6%96%87%E4%BB%B6%E6%9C%80%E5%A4%A7%E6%95%B0%E5%BC%82%E5%B8%B8.html"/>
+    <id>https://blog.ywandy.top/解决linux下nodejs中watch文件最大数异常.html</id>
+    <published>2019-04-16T02:15:16.000Z</published>
+    <updated>2019-04-16T02:15:44.910Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="解决在linux下使用nodejs出现的ENOSPC-System-limit-for-number-of-file-watchers-reached-问题"><a href="#解决在linux下使用nodejs出现的ENOSPC-System-limit-for-number-of-file-watchers-reached-问题" class="headerlink" title="解决在linux下使用nodejs出现的ENOSPC: System limit for number of file watchers reached 问题"></a>解决在linux下使用nodejs出现的ENOSPC: System limit for number of file watchers reached 问题</h3><h3 id="错误："><a href="#错误：" class="headerlink" title="错误："></a>错误：</h3><p><strong>ENOSPC: System limit for number of file watchers reached</strong></p><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>linux系统中限制了用户可以watch文件变更的最大数，因此需要通过sysctl.conf进行更改数值</p><h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</span><br></pre></td></tr></table></figure><h3 id="如果是archlinux："><a href="#如果是archlinux：" class="headerlink" title="如果是archlinux："></a>如果是archlinux：</h3><p>在文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```bash</span><br><span class="line">fs.inotify.max_user_watches=524288</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;解决在linux下使用nodejs出现的ENOSPC-System-limit-for-number-of-file-watchers-reached-问题&quot;&gt;&lt;a href=&quot;#解决在linux下使用nodejs出现的ENOSPC-System-limit-fo
+      
+    
+    </summary>
+    
+      <category term="技巧总结" scheme="https://blog.ywandy.top/categories/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="linux" scheme="https://blog.ywandy.top/tags/linux/"/>
+    
+      <category term="nodejs" scheme="https://blog.ywandy.top/tags/nodejs/"/>
+    
+  </entry>
   
   <entry>
     <title>解决centos的ssh链接慢问题</title>

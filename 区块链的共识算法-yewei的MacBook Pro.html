@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="区块链,hyperledger,composer,nodejs,">
+  <meta name="keywords" content="区块链,共识,">
 
 
 
@@ -92,24 +92,21 @@
 
 
 
-<meta name="description" content="Playground 教程:介绍：我们将使用定义的fabric网络，并且把使用Hyperledger Composer 基于我们的fabric网络构建一个业务网络（business network ），同时我们一步一步完成从创建资产、创建参与者、编写智能合约把一个用户的资产转让给另外一个用户。在这个教程，将会使用Hyperledger Composer里面的套件——composer-playgro">
-<meta name="keywords" content="区块链,hyperledger,composer,nodejs">
+<meta name="description" content="区块链分类：公有链：公有链通常也称为非许可链（Permissionless Blockchain），任何人都可以参与区块链数据维护和读取，容易部署应用程序，完全去中心化不受任何机构控制。  公有链是真正意义上的完全去中心化的区块链，它通过密码学保证交易不可篡改，同时也利用密码学验证以及经济上的激励，在互为陌生的网络环境中建立共识，从而形成去中心化的信用机制。在公有链中的共识机制一般是工作量证明（P">
+<meta name="keywords" content="区块链,共识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一步一步入门Hyperledger-composer-学习Playground">
-<meta property="og:url" content="https://blog.ywandy.top/一步一步入门Hyperledger-composer-学习Playground.html">
+<meta property="og:title" content="区块链的共识算法">
+<meta property="og:url" content="https://blog.ywandy.top/区块链的共识算法.html">
 <meta property="og:site_name" content="YeweiAndy ‘S Blog 技术分享，生活随想">
-<meta property="og:description" content="Playground 教程:介绍：我们将使用定义的fabric网络，并且把使用Hyperledger Composer 基于我们的fabric网络构建一个业务网络（business network ），同时我们一步一步完成从创建资产、创建参与者、编写智能合约把一个用户的资产转让给另外一个用户。在这个教程，将会使用Hyperledger Composer里面的套件——composer-playgro">
+<meta property="og:description" content="区块链分类：公有链：公有链通常也称为非许可链（Permissionless Blockchain），任何人都可以参与区块链数据维护和读取，容易部署应用程序，完全去中心化不受任何机构控制。  公有链是真正意义上的完全去中心化的区块链，它通过密码学保证交易不可篡改，同时也利用密码学验证以及经济上的激励，在互为陌生的网络环境中建立共识，从而形成去中心化的信用机制。在公有链中的共识机制一般是工作量证明（P">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180821/CcjFH8i7gi.png">
-<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180821/L064GAJ0mc.png">
-<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180821/G19fma6a5L.png">
-<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180821/DAl7bDg0LJ.png">
-<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180821/igfh4DJIIc.png">
-<meta property="og:updated_time" content="2019-04-03T05:37:20.153Z">
+<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180822/HkBlLFcc9j.png?imageslim">
+<meta property="og:image" content="http://storage.ywandy.top/yewei-photo/180822/KIJ5mlbBEl.jpg?imageslim">
+<meta property="og:updated_time" content="2019-04-03T05:36:54.718Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一步一步入门Hyperledger-composer-学习Playground">
-<meta name="twitter:description" content="Playground 教程:介绍：我们将使用定义的fabric网络，并且把使用Hyperledger Composer 基于我们的fabric网络构建一个业务网络（business network ），同时我们一步一步完成从创建资产、创建参与者、编写智能合约把一个用户的资产转让给另外一个用户。在这个教程，将会使用Hyperledger Composer里面的套件——composer-playgro">
-<meta name="twitter:image" content="http://storage.ywandy.top/yewei-photo/180821/CcjFH8i7gi.png">
+<meta name="twitter:title" content="区块链的共识算法">
+<meta name="twitter:description" content="区块链分类：公有链：公有链通常也称为非许可链（Permissionless Blockchain），任何人都可以参与区块链数据维护和读取，容易部署应用程序，完全去中心化不受任何机构控制。  公有链是真正意义上的完全去中心化的区块链，它通过密码学保证交易不可篡改，同时也利用密码学验证以及经济上的激励，在互为陌生的网络环境中建立共识，从而形成去中心化的信用机制。在公有链中的共识机制一般是工作量证明（P">
+<meta name="twitter:image" content="http://storage.ywandy.top/yewei-photo/180822/HkBlLFcc9j.png?imageslim">
 
 
 
@@ -139,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.ywandy.top/一步一步入门Hyperledger-composer-学习Playground.html">
+  <link rel="canonical" href="https://blog.ywandy.top/区块链的共识算法.html">
 
 
 
@@ -150,7 +147,7 @@
 
 
 
-  <title>一步一步入门Hyperledger-composer-学习Playground | YeweiAndy ‘S Blog 技术分享，生活随想</title>
+  <title>区块链的共识算法 | YeweiAndy ‘S Blog 技术分享，生活随想</title>
   
 
 
@@ -390,7 +387,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.ywandy.top/一步一步入门Hyperledger-composer-学习Playground.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.ywandy.top/区块链的共识算法.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yewei_andy">
@@ -407,7 +404,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">一步一步入门Hyperledger-composer-学习Playground</h2>
+          <h2 class="post-title" itemprop="name headline">区块链的共识算法</h2>
         
 
         <div class="post-meta">
@@ -419,8 +416,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-21T22:01:48+08:00">
-                2018-08-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T08:54:39+08:00">
+                2018-08-22
               </time>
             
 
@@ -435,7 +432,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-03T13:37:20+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-03T13:36:54+08:00">
                 2019-04-03
               </time>
             
@@ -472,8 +469,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/一步一步入门Hyperledger-composer-学习Playground.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/一步一步入门Hyperledger-composer-学习Playground.html" itemprop="commentCount"></span>
+                <a href="/区块链的共识算法.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/区块链的共识算法.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -481,7 +478,7 @@
 
           
           
-             <span id="/一步一步入门Hyperledger-composer-学习Playground.html" class="leancloud_visitors" data-flag-title="一步一步入门Hyperledger-composer-学习Playground">
+             <span id="/区块链的共识算法.html" class="leancloud_visitors" data-flag-title="区块链的共识算法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -511,7 +508,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,962
+                  2,926
                 </span>
               
 
@@ -527,7 +524,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  10
                 </span>
               
             </div>
@@ -548,81 +545,91 @@
       
 
       
-        <h1 id="Playground-教程"><a href="#Playground-教程" class="headerlink" title="Playground 教程:"></a>Playground 教程:</h1><h2 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h2><p>我们将使用定义的fabric网络，并且把使用Hyperledger Composer 基于我们的fabric网络构建一个业务网络（business network ），同时我们一步一步完成从创建资产、创建参与者、编写智能合约把一个用户的资产转让给另外一个用户。在这个教程，将会使用Hyperledger Composer里面的套件——composer-playground。</p>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标:"></a>目标:</h2><ol>
-<li>使用Fabric搭建一个简单的网络</li>
-<li>启动composer-playground并使用web沙盒编写和调试代码</li>
-<li>创建资产（Asset）</li>
-<li>创建参与者（Participants）</li>
-<li>编写智能合约代码（Logic）用于资产的归属权更改</li>
-<li>测试完成后把.bna文件导出，部署到刚刚的Fabric真实网络</li>
-<li>使用composer-playground去连接部署上去的业务网络</li>
-</ol>
-<h2 id="实践"><a href="#实践" class="headerlink" title="实践:"></a>实践:</h2><h3 id="一、使用Fabric搭建一个简单的网络："><a href="#一、使用Fabric搭建一个简单的网络：" class="headerlink" title="一、使用Fabric搭建一个简单的网络："></a>一、使用Fabric搭建一个简单的网络：</h3><ol>
-<li><p>进入<strong>fabric</strong>网络一键脚本的<strong>repo</strong>，然后执行<strong>startFarbic.sh</strong>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./startFabric.sh</span><br></pre></td></tr></table></figure>
-<p>此时会刷新出类似一下的信息:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Creating network &quot;composer_default&quot; with the default driver</span><br><span class="line">Creating orderer.example.com ... done</span><br><span class="line">Creating ca.org1.example.com ... done</span><br><span class="line">Creating couchdb             ... done</span><br><span class="line">Creating mongodb             ... done</span><br><span class="line">Creating peer0.org1.example.com ... done</span><br><span class="line">sleeping for 15 seconds to wait for fabric to complete start up</span><br><span class="line">2018-08-21 22:31:08.469 CST [msp] GetLocalMSP -&gt; DEBU 001 Returning existing local MSP</span><br><span class="line">2018-08-21 22:31:08.469 CST [msp] GetDefaultSigningIdentity -&gt; DEBU 002 Obtaining default signing identity</span><br><span class="line">2018-08-21 22:31:08.471 CST [channelCmd] InitCmdFactory -&gt; INFO 003 Endorser and orderer connections initialized</span><br><span class="line">.........................................................</span><br><span class="line">2018-08-21 22:31:08.958 CST [channelCmd] executeJoin -&gt; INFO 006 Successfully submitted proposal to join channel</span><br><span class="line">2018-08-21 22:31:08.958 CST [main] main -&gt; INFO 007 Exiting.....</span><br></pre></td></tr></table></figure>
-<p>只需要看到最后面出现了<strong>successfully</strong>即可</p>
-</li>
-<li><p>等待网络完全启动完成，执行<strong>createPeerAdminCard.sh:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./createPeerAdminCard.sh</span><br></pre></td></tr></table></figure>
-<p>这步会把创建composer的<strong>PeerAdmin Card</strong>（具体用途将在以后章节详细讲解），只需知道，需要有这个<strong>card</strong>才能接下来完成<strong>composer</strong>业务网络部署到真实的fabric网络。这个脚本会自动完成这一系列操作，执行了这个脚本，将会有类似以下的输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">Development only script <span class="keyword">for</span> Hyperledger Fabric control</span><br><span class="line">Running <span class="string">'createPeerAdminCard.sh'</span></span><br><span class="line">FABRIC_VERSION is <span class="built_in">unset</span>, assuming hlfv11</span><br><span class="line">FABRIC_START_TIMEOUT is <span class="built_in">unset</span>, assuming 15 (seconds)</span><br><span class="line"></span><br><span class="line">Using composer-cli at v0.19.12</span><br><span class="line"></span><br><span class="line">Successfully created business network card file to</span><br><span class="line">        Output file: /tmp/PeerAdmin@hlfv1.card</span><br><span class="line"></span><br><span class="line">Command succeeded</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Successfully imported business network card</span><br><span class="line">        Card file: /tmp/PeerAdmin@hlfv1.card</span><br><span class="line">        Card name: PeerAdmin@hlfv1</span><br><span class="line"></span><br><span class="line">Command succeeded</span><br><span class="line"></span><br><span class="line">The following Business Network Cards are available:</span><br><span class="line"></span><br><span class="line">Connection Profile: hlfv1</span><br><span class="line">┌─────────────────┬───────────┬──────────────────┐</span><br><span class="line">│ Card Name       │ UserId    │ Business Network │</span><br><span class="line">├─────────────────┼───────────┼──────────────────┤</span><br><span class="line">│ PeerAdmin@hlfv1 │ PeerAdmin │                  │</span><br><span class="line">└─────────────────┴───────────┴──────────────────┘</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Issue composer card list --card &lt;Card Name&gt; to get details a specific card</span><br><span class="line"></span><br><span class="line">Command succeeded</span><br></pre></td></tr></table></figure>
-<p>我们可以使用 <code>composer card list</code> 去验证一下，同时使用<code>composer card list --card PeerAdmin@hlfv1</code> 可以返回具体的card信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">➜  fabric-dev-servers git:(master) ✗ composer card list --card PeerAdmin@hlfv1</span><br><span class="line">userName:            PeerAdmin</span><br><span class="line">description:</span><br><span class="line">businessNetworkName:</span><br><span class="line">identityId:          114aab0e76bf0c78308f89efc4b8c9423e31568da0c340ca187a9b17aa9a4457</span><br><span class="line">roles:</span><br><span class="line">  - PeerAdmin</span><br><span class="line">  - ChannelAdmin</span><br><span class="line">connectionProfile:</span><br><span class="line">  name:   hlfv1</span><br><span class="line">  x-type: hlfv1</span><br><span class="line">credentials:         Credentials <span class="built_in">set</span></span><br><span class="line"></span><br><span class="line">Command succeeded</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="二、启动composer-playground："><a href="#二、启动composer-playground：" class="headerlink" title="二、启动composer-playground："></a>二、启动composer-playground：</h3><p>只需要在命令行输入composer-playground:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer-playground</span><br></pre></td></tr></table></figure>
-<p>会有以下的输出:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  fabric-dev-servers git:(master) ✗ composer-playground</span><br><span class="line">info: [Hyperledger-Composer] :LoadModule               :loadModule()              Loading composer-wallet-filesystem from /home/wwb/xinou-network/node_modules/composer-wallet-filesystem</span><br><span class="line">info: [Hyperledger-Composer] :PlaygroundAPI            :createServer()            Playground API started on port 8080</span><br></pre></td></tr></table></figure>
-<p>说明<figure class="highlight plain"><figcaption><span>正确启动，并且监听**8080**端口</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">然后访问浏览器的http://localhost:8080 即可访问composer-playground的web页面</span><br><span class="line"></span><br><span class="line">![composer-playground-overview](http://storage.ywandy.top/yewei-photo/180821/lm1GgaFf4G.png)</span><br><span class="line"></span><br><span class="line">### 三、启动web沙盒环境并调试代码：</span><br><span class="line"></span><br><span class="line">1. 点击进入如图所示区域，就是web沙盒的区域：</span><br><span class="line"></span><br><span class="line">   ![mark](http://storage.ywandy.top/yewei-photo/180821/5B03hl3aeI.png)</span><br><span class="line"></span><br><span class="line">2. 按照以下填写我们的**tutorial-network**，并且点击**depoly**</span><br><span class="line"></span><br><span class="line">   1. 这一步将会启动一个空的业务网络</span><br><span class="line"></span><br><span class="line">   2. 这个业务网络的名字叫做**turtorial-network**</span><br><span class="line"></span><br><span class="line">   3. 这个业务被**depoly**，默认的业务网卡（暂时有且只有一个）的是**admin@turtorial-network**</span><br><span class="line"></span><br><span class="line">      (业务网卡这边以后会有专门的章节讲解)</span><br><span class="line"></span><br><span class="line">   ![mark](http://storage.ywandy.top/yewei-photo/180821/AeBbdAamfi.png)</span><br><span class="line"></span><br><span class="line">3. 此时等depoly完成后，点击connect即可进入在线的沙盒环境：</span><br><span class="line"></span><br><span class="line">   ![mark](http://storage.ywandy.top/yewei-photo/180821/BdeCbB5kA5.png)</span><br><span class="line"></span><br><span class="line">   ![mark](http://storage.ywandy.top/yewei-photo/180821/1C9K5hAl2j.png)</span><br><span class="line"></span><br><span class="line">### 三、创建资产和参与者：</span><br><span class="line"></span><br><span class="line">#### 文件目录：</span><br><span class="line"></span><br><span class="line">  - 模型文件 (.cto)</span><br><span class="line"></span><br><span class="line">    （定义 Assets, Participants 和Transactions）</span><br><span class="line"></span><br><span class="line">- 智能合约(.js)</span><br><span class="line"></span><br><span class="line">  （使用JavaScript定义执行Transaction）</span><br><span class="line"></span><br><span class="line">- Query查询文件(.qry)</span><br><span class="line"></span><br><span class="line">  (定义couchdb的queries查询语句)</span><br><span class="line"></span><br><span class="line">- 访问权限控制文件(permissions.acl)</span><br><span class="line"></span><br><span class="line">  (定义权限访问控制的文件)</span><br><span class="line"></span><br><span class="line">#### 编写模型文件代码：</span><br><span class="line"></span><br><span class="line">1. 在`model.cto`文件里面输入以下代码:</span><br><span class="line"></span><br><span class="line">   ```js</span><br><span class="line">   namespace org.example.mynetwork //定义网络名</span><br><span class="line">   asset Commodity identified by tradingSymbol &#123; //定义一个资产</span><br><span class="line">       o String tradingSymbol					</span><br><span class="line">       o String description</span><br><span class="line">       o String mainExchange</span><br><span class="line">       o Double quantity</span><br><span class="line">       --&gt; Trader owner</span><br><span class="line">   &#125;</span><br><span class="line">   participant Trader identified by tradeId &#123; //定义一个参与者</span><br><span class="line">       o String tradeId</span><br><span class="line">       o String firstName</span><br><span class="line">       o String lastName</span><br><span class="line">   &#125;</span><br><span class="line">   transaction Trade &#123; 					//定义一个transaction的数据结构</span><br><span class="line">       --&gt; Commodity commodity</span><br><span class="line">       --&gt; Trader newOwner</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="编写一个智能合约代码："><a href="#编写一个智能合约代码：" class="headerlink" title="编写一个智能合约代码："></a>编写一个智能合约代码：</h4><p>我们需要一个交易资产的智能合约，需要使用js实现这个。目前我们的<strong>composer-playground</strong>并没有这个<code>script.js</code></p>
+        <h2 id="区块链分类："><a href="#区块链分类：" class="headerlink" title="区块链分类："></a>区块链分类：</h2><h3 id="公有链："><a href="#公有链：" class="headerlink" title="公有链："></a>公有链：</h3><p>公有链通常也称为非许可链（Permissionless Blockchain），任何人都可以参与区块链数据维护和读取，容易部署应用程序，完全去中心化不受任何机构控制。 </p>
+<p>公有链是真正意义上的完全去中心化的区块链，它通过密码学保证交易不可篡改，同时也利用密码学验证以及经济上的激励，在互为陌生的网络环境中建立共识，从而形成去中心化的信用机制。在公有链中的共识机制一般是工作量证明（PoW）和权益证明（PoS） 。 </p>
+<h3 id="联盟链："><a href="#联盟链：" class="headerlink" title="联盟链："></a>联盟链：</h3><p>联盟链是一种需要注册许可的区块链，这种区块链也称为许可链（Permissioned Blockchain）。联盟链仅限于联盟成员参与，联盟规模可以大到国与国之间，也可以是不同的机构企业之间。</p>
+<p> 区块链上的读写权限、参与记账权限按联盟规则来制定。整个网络由成员机构共同维护，网络接入一般通过成员机构的网关节点接入，共识过程由预先选好的节点控制。因此联盟链一般不采用工作量证明的挖矿机制，而是多采用权益证明（PoS）或PBFT（Practical Byzantine Fault Tolerant）、RAFT等共识算法。 、</p>
+<h3 id="私有链："><a href="#私有链：" class="headerlink" title="私有链："></a>私有链：</h3><p>指其写入权限由某个组织和机构控制的区块链，参与节点的资格会被严格限制。由于参与节点是有限和可控的，因此私有链往往可以有极快的交易速度、更好的隐私保护、更低的交易成本、不容易被恶意攻击，并且能做到身份认证等金融行业必需的要求。相比中心化数据库，私有链能够防止机构内单节点故意隐瞒或者篡改数据，即使发生错误，也能够迅速发现来源。因此许多大型金融机构在目前更加倾向于使用私有链技术。</p>
+<p>私有链的价值主要是提供安全、可追溯、不可篡改、自动执行的运算平台，可以同时防范来自内部和外部对数据的安全攻击，这个在传统的系统是很难做到的。</p>
+<h2 id="共识算法分类："><a href="#共识算法分类：" class="headerlink" title="共识算法分类："></a>共识算法分类：</h2><h4 id="一、工作量证明（PoW）："><a href="#一、工作量证明（PoW）：" class="headerlink" title="一、工作量证明（PoW）："></a>一、工作量证明（PoW）：</h4><h5 id="代表项目：比特币（BTC"><a href="#代表项目：比特币（BTC" class="headerlink" title="代表项目：比特币（BTC)"></a>代表项目：比特币（BTC)</h5><p>为了实现对交易打时间戳，Hash交易数据。比特币用了工作量证明方法。网络中的每个节点从事于解决一个适度困难的密码难题。难题的解决方法是：把区块中的所有数据做SHA256哈希运算，并且得到哈希值小于给定的目标值。区块中还包含一个Nonce值，通过递增Nonce来寻找正确的哈希值。这个密码谜题被设计成，每隔10Mins会找到一个谜题答案。一旦正确的哈希值被找到，节点就会向网络中广播这个哈希值。这个哈希值可以很容易的被网络中的其他节点验证，节点可以对收到区块后对区块中的数据进行SHA256运算哈希值。要修改一个区块需要重做这个区块以及这个区块之后所有区块的工作量证明 。</p>
+<p>例如：</p>
+<p>​    这个密码难题是给定一个字符串“hello world”对字符串进行SHA256计算，如果得到hash为0000开头，那么验证通过，那么节点需要对字符串进行SHA256计算</p>
+<h4 id="二、DPOS算法："><a href="#二、DPOS算法：" class="headerlink" title="二、DPOS算法："></a>二、DPOS算法：</h4><h5 id="代表项目：EOS"><a href="#代表项目：EOS" class="headerlink" title="代表项目：EOS"></a>代表项目：EOS</h5><p>POW的缺陷：</p>
 <ol>
-<li>我们点击<code>add file</code>，然后选择<code>script file</code></li>
+<li>矿池导致算力越来越集中</li>
+<li>电力耗费过大 </li>
 </ol>
-<p><img src="http://storage.ywandy.top/yewei-photo/180821/CcjFH8i7gi.png" alt="mark"></p>
-<ol start="2">
-<li>随后我们会进入<code>script.js</code>，这时候可以把代码编写进那个在线的IDE</li>
+<p>受托人的节点服务器相当于比特币网络里的矿机，在完成本职工作的同时可以领取区块奖励和交易的手续费。</p>
+<p>一个区块链项目的受托人个数由项目发起方决定，一般是101个受托人。任何一个持币用户都可以参与到投票和竞选受托人这两个过程中。用户可以随时投票、撤票，每个用户投票的权重和自己的持币量成正比。投票和撤票可以随时进行，在每一轮(round)选举结束后，得票率最高的101（一般为101，也可以是其他数字，具体由区块链项目方决定）个用户则成为该项目的受托人，负责打包区块、维持系统的运转并获得相应的奖励。</p>
+<p>选举的根本目的，是通过每个人的投票选举出社区里对项目发展和运行最有利的101个用户。这101个用户的服务器节点既可以高效维护系统的运转，而他们也会贡献自己的能力促进区块链项目的发展</p>
+<h4 id="三、消逝时间量证明POET："><a href="#三、消逝时间量证明POET：" class="headerlink" title="三、消逝时间量证明POET："></a>三、消逝时间量证明POET：</h4><h5 id="代表项目：Hyperledger-Sawtooth"><a href="#代表项目：Hyperledger-Sawtooth" class="headerlink" title="代表项目：Hyperledger Sawtooth"></a>代表项目：Hyperledger Sawtooth</h5><p>每个节点在发布块以前都要从encalve（使用安全的CPU指令）获取一个随机等待时间，等待时间最短的先发布块，encalve有两个函数，一个是CreateTimer和CheckTimer，第一个是产生一个定时器，另一个是校验定时器是否合法，如果合法将会生成一个凭证，凭证可以用来校验这个随机时间是否使用encalve产生以及是否经过了这个随机等待时间</p>
+<h4 id="四、股权证明机制POS："><a href="#四、股权证明机制POS：" class="headerlink" title="四、股权证明机制POS："></a>四、股权证明机制POS：</h4><h5 id="代表项目：以太坊"><a href="#代表项目：以太坊" class="headerlink" title="代表项目：以太坊"></a>代表项目：以太坊</h5><p>POS的核心是使用币龄，假设每个币每天产生1币龄，或者当你挖出一个块能直接清空币龄，当365币龄被清空，就能获得0.05个币的利息（年利率5%），其余的基本和POW是类似，基于工作量去证明。</p>
+<h5 id="设计初衷："><a href="#设计初衷：" class="headerlink" title="设计初衷："></a>设计初衷：</h5><ol>
+<li>比特币区块产量4年减半，挖矿难度变大，使得矿工可能人数变少，POS采用利息，而且必须打开POS客户端才能获得利息，使得网络节点数量处于健壮状态</li>
+<li>由于有部分货币是利息产生，也就是即使有51%货币也不一定能造成51%攻击</li>
+<li>解决了比特币的通货紧缩问题</li>
 </ol>
-<p><img src="http://storage.ywandy.top/yewei-photo/180821/L064GAJ0mc.png" alt="mark"></p>
-<ol start="3">
-<li>把以下代码复制进入<code>script.js</code>：</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Track the trade of a commodity from one trader to another</span></span><br><span class="line"><span class="comment"> * @param &#123;org.example.mynetwork.Trade&#125; trade - the trade to be processed</span></span><br><span class="line"><span class="comment"> * @transaction</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">tradeCommodity</span>(<span class="params">trade</span>) </span>&#123;</span><br><span class="line">    trade.commodity.owner = trade.newOwner; <span class="comment">//通过把原本资产的owner设置成传参的新的owner</span></span><br><span class="line">    <span class="keyword">let</span> assetRegistry = <span class="keyword">await</span> getAssetRegistry(<span class="string">'org.example.mynetwork.Commodity'</span>); <span class="comment">//获取资产的对象</span></span><br><span class="line">    <span class="keyword">await</span> assetRegistry.update(trade.commodity); <span class="comment">//资产更新</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="四、部署网络并且测试"><a href="#四、部署网络并且测试" class="headerlink" title="四、部署网络并且测试:"></a>四、部署网络并且测试:</h3><h4 id="沙盒部署："><a href="#沙盒部署：" class="headerlink" title="沙盒部署："></a>沙盒部署：</h4><ol>
-<li><p>点击右下角的<strong>Depoly changes</strong></p>
+<h4 id="五、拜占庭容错PBFT："><a href="#五、拜占庭容错PBFT：" class="headerlink" title="五、拜占庭容错PBFT："></a>五、拜占庭容错PBFT：</h4><h5 id="代表项目：Hyperledger-Fabric"><a href="#代表项目：Hyperledger-Fabric" class="headerlink" title="代表项目：Hyperledger Fabric"></a>代表项目：Hyperledger Fabric</h5><p>PBFT算法要求至少要4个参与者，一个被选举为军长，3个师长。军长接到总司令命令：你们向前行军500公里。军长就会给3个师长发命令向前行军500公里。3个师长收到消息后会执行命令，并汇报结果。A师长说我在首都以东500公里，B师长说我在首都以东500公里，C师长说我在首都以东250公里。军长总结3个师长的汇报，发现首都以东500公里占多数（2票&gt;1票），所以就会忽略C师长的汇报结果，给总司令汇报说，好了，现在部队是在首都以东500公里了。这就是PBFT算法。</p>
+<p><strong>PBFT算法的核心理论是n&gt;=3f+1</strong><br> n是系统中的总节点数，f是允许出现<strong>故障</strong>的节点数。换句话说，如果这个系统允许出现f个故障，那么这个系统必须包括n个节点，才能解决故障。</p>
+<h5 id="五个概念："><a href="#五个概念：" class="headerlink" title="五个概念："></a>五个概念：</h5><ol>
+<li><p>client：请求（request）自愿者，上例中指总司令。</p>
 </li>
-<li><p>这时候会提示部署成功，然后点击正上方的标签栏<strong>Test</strong> 进入测试的页面，如图：</p>
-<p><img src="http://storage.ywandy.top/yewei-photo/180821/G19fma6a5L.png" alt="mark"></p>
+<li><p>replica：副本，所有参与提供服务的节点，上例指军长和师长</p>
 </li>
-</ol>
-<h4 id="沙盒调试："><a href="#沙盒调试：" class="headerlink" title="沙盒调试："></a>沙盒调试：</h4><ol>
-<li><p>选中Trader，然后点击右上角的 Create new participant，然后会弹出界面，输入以下的代码:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"$class"</span>: <span class="string">"org.example.mynetwork.Trader"</span>,</span><br><span class="line">  <span class="attr">"tradeId"</span>: <span class="string">"TRADER1"</span>,</span><br><span class="line">  <span class="attr">"firstName"</span>: <span class="string">"Jenny"</span>,</span><br><span class="line">  <span class="attr">"lastName"</span>: <span class="string">"Jones"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>点击确认后，再次重复刚刚步骤，并输入以下的代码:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"<span class="variable">$class</span>"</span>: <span class="string">"org.example.mynetwork.Trader"</span>,</span><br><span class="line">  <span class="string">"tradeId"</span>: <span class="string">"TRADER2"</span>,</span><br><span class="line">  <span class="string">"firstName"</span>: <span class="string">"Amy"</span>,</span><br><span class="line">  <span class="string">"lastName"</span>: <span class="string">"Williams"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上的代码作用是创建两个交易者，一个是Jenny Jones，他的tradeid是TRADER1，另一个是Williams Amy ，他的tradeid是TRADER2（在这个定义交易者的数据结构，是使用tradeID作为主键的，关于模型文件的讲解会在以后的章节讲解到）</p>
+<li><p>primary：承担起提供服务主要职责的节点，上例是军长</p>
 </li>
-<li><p>选中Commdity然后点击右上角的Create new asset，并输入以下代码：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"$class"</span>: <span class="string">"org.example.mynetwork.Commodity"</span>,</span><br><span class="line">  <span class="attr">"tradingSymbol"</span>: <span class="string">"ABC"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"Test commodity"</span>,</span><br><span class="line">  <span class="attr">"mainExchange"</span>: <span class="string">"Euronext"</span>,</span><br><span class="line">  <span class="attr">"quantity"</span>: <span class="number">72.297</span>,</span><br><span class="line">  <span class="attr">"owner"</span>: <span class="string">"resource:org.example.mynetwork.Trader#TRADER1"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这时候会创建一个叫做ABC的资产，属于TRADER1的，也就是Jenny Jones的</p>
+<li><p>backup：其他副本，但相对于primary角色。上例指师长。</p>
 </li>
-<li><p>提交transaction，把物品ABC从TRADER1交易给TRADER2</p>
-<p>点击Submit Transaction，然后确保Type选中Trade，然后输入以下代码:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"$class"</span>: <span class="string">"org.example.mynetwork.Trade"</span>,</span><br><span class="line">  <span class="attr">"commodity"</span>: <span class="string">"resource:org.example.mynetwork.Commodity#ABC"</span>,</span><br><span class="line">  <span class="attr">"newOwner"</span>: <span class="string">"resource:org.example.mynetwork.Trader#TRADER2"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如图：</p>
-<p><img src="http://storage.ywandy.top/yewei-photo/180821/DAl7bDg0LJ.png" alt="mark"></p>
-<p>  当点击submit后，成功后会有以下提示:</p>
+<li><p>view：处于存在primary-bakup场景中的相对稳定的关系，叫视图。</p>
 </li>
 </ol>
-<p><img src="http://storage.ywandy.top/yewei-photo/180821/igfh4DJIIc.png" alt="mark"></p>
-<p> 说明交易已经成功了，我们看这条ABC的条目，发现owner已经变成TRADER2了，说明提交智能合约成功了，并且实现了智能合约更改物品的归属权。</p>
-<h4 id="打包并且导出当前业务网络为-bna文件"><a href="#打包并且导出当前业务网络为-bna文件" class="headerlink" title="打包并且导出当前业务网络为.bna文件:"></a>打包并且导出当前业务网络为.bna文件:</h4><p>.bna文件可以用于使用composer命令行工具，实现业务网络的安装和更新，因此我们在沙盒测试完成后，需要导出这个.bna，才能用于后续的命令行部署到真实的fabric网络</p>
+<p> 如果primary出现故障，这种相对稳定的视图关系就会转变（transit）。比如军长叛逃（出现故障，对外表现为不可见），那么某个师长就会转变成为军长。系统也就从视图a转变为视图b（a,b均为整数）。</p>
+<h5 id="四个阶段："><a href="#四个阶段：" class="headerlink" title="四个阶段："></a>四个阶段：</h5><ol>
+<li><p>请求(request)：client请求阶段（有些说法不包括这个阶段）。总司令给军长下命令。</p>
+</li>
+<li><p>预准备(pre-prepare)：主节点向所有backup节点发送预准备消息，其中包括当前视图编号，client请求以及请求摘要，签名是否一致等。军长对各位师长说：现在是我的View（视图），我是军长，你们都是师长，所有人都得听我的。现在公布总司令的命令（先说说总司令是谁，命令摘要）。</p>
+</li>
+<li><p>准备(prepare)：包括主节点在内的所有副本节点在收到准备消息之后，对消息的签名是否正确，视图编号是否一致，以及消息序号是否满足水线限制这三个条件进行验证，如果验证通过则把这个准备消息写入消息日志中。backup节点核对签名信息，比如其他师长听到总司令的名字，说对，总司令就是这个人没错，然后核对总司令曾经任命这家伙当军长，好吧，那就听他的吧。</p>
+</li>
+<li><p>确认(commit)：</p>
+<p>每个副本接受确认消息的条件是：</p>
 <ol>
-<li>点击Define，回到原来编写代码的标签页</li>
-<li>点击新增文件右边的export，即可获得当前业务网络的.bna文件</li>
+<li><p>签名正确</p>
+</li>
+<li><p>消息的视图编号与节点的当前视图编号一致</p>
+</li>
+<li><p>消息的序号n满足水线条件</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>   在h和H之间。一旦确认消息的接受条件满足了，则该副本节点将确认消息写入消息日志中。每个师长都经过上述核对，确认无误，就会接受命令进行执行。</p>
+<h4 id="六、Hyperledger-Kafka-分布式队列-："><a href="#六、Hyperledger-Kafka-分布式队列-：" class="headerlink" title="六、Hyperledger Kafka(分布式队列)："></a>六、Hyperledger Kafka(分布式队列)：</h4><h5 id="设计思路："><a href="#设计思路：" class="headerlink" title="设计思路："></a>设计思路：</h5><p>kafka是一个分布式高可用消息队列，可以有序的管理消息并在多个冗余副本间保证数据一致性。kafka集群的状态由zookeeper管理，选举leader节点。</p>
+<p>orderer服务从kafka集群里获取相应topic（kafka的分区，用于在队列里隔离出多个数据域）的数据，以保证交易数据有序，借助了kafka的分布式一致机制。如下图：</p>
+<p><img src="http://storage.ywandy.top/yewei-photo/180822/HkBlLFcc9j.png?imageslim" alt="mark"></p>
+<h5 id="kafka和orderer通讯流程："><a href="#kafka和orderer通讯流程：" class="headerlink" title="kafka和orderer通讯流程："></a>kafka和orderer通讯流程：</h5><ol>
+<li><p>Peer（客户端）通过GRPC发起通信，与Orderer连接成功之后，便可以向Orderer发送消息</p>
+</li>
+<li><p>Orderer通过Recv接口接收Peer发送过来的消息，并将消息推送到Kafka</p>
+</li>
+<li><p>同时与Kafka相连接的Orderer通过Consumer实例消费Kafka上的消息，将消费的消息进行同一排序（Order）</p>
+</li>
+<li><p>排序完成后，当达到生成数据块（Block）的条件:</p>
+<ol>
+<li><p>下一数据块定时器到期，定时器通过向Orderer向Kafka发送定时器消息，再通过Kafka消费来达到定时效果(Batch Timeout)。</p>
+</li>
+<li><p>每消费一条真实数据，就触发判断是否达到生成一个新的数据块条件(Batch Size)，该条件由当前待生成数据块的数据总的大小以及记录数决定），并创建新的数据块（CreateNextBlock），创建成功则将数据块写入ledger（WriteBlock）。 </p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="七、-Hyperledger-Solo-单节点排序"><a href="#七、-Hyperledger-Solo-单节点排序" class="headerlink" title="七、 Hyperledger Solo(单节点排序):"></a>七、 Hyperledger Solo(单节点排序):</h4><p>order-solo模式作为单节点通信模式，所有从peer收到的消息都在本节点进行排序与生成数据块，详细流程见下图： </p>
+<p><img src="http://storage.ywandy.top/yewei-photo/180822/KIJ5mlbBEl.jpg?imageslim" alt="mark"></p>
+<h5 id="solo-order的通信流程："><a href="#solo-order的通信流程：" class="headerlink" title="solo-order的通信流程："></a>solo-order的通信流程：</h5><ol>
+<li>Peer（客户端）通过GRPC发起通信</li>
+<li>与Orderer连接成功之后，便可以向Orderer发送消息。</li>
+<li>Orderer通过Recv接口接收Peer发送过来的消息，Orderer将接收到的消息生成数据块，并将数据块存入ledger</li>
+<li>peer通过deliver接口从orderer中的ledger获取数据块。 </li>
 </ol>
 
       
@@ -655,11 +662,7 @@
           
             <a href="/tags/区块链/" <i class="fa fa-tag"> 区块链</a>
           
-            <a href="/tags/hyperledger/" <i class="fa fa-tag"> hyperledger</a>
-          
-            <a href="/tags/composer/" <i class="fa fa-tag"> composer</a>
-          
-            <a href="/tags/nodejs/" <i class="fa fa-tag"> nodejs</a>
+            <a href="/tags/共识/" <i class="fa fa-tag"> 共识</a>
           
         </div>
       
@@ -672,8 +675,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/GO语言的变量.html" rel="next" title="GO语言的变量">
-                <i class="fa fa-chevron-left"></i> GO语言的变量
+              <a href="/一步一步入门Hyperledger-composer-学习Playground.html" rel="next" title="一步一步入门Hyperledger-composer-学习Playground">
+                <i class="fa fa-chevron-left"></i> 一步一步入门Hyperledger-composer-学习Playground
               </a>
             
           </div>
@@ -682,8 +685,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/区块链的共识算法.html" rel="prev" title="区块链的共识算法">
-                区块链的共识算法 <i class="fa fa-chevron-right"></i>
+              <a href="/解决hexo博客的Next主题busuanzi-count失效方法.html" rel="prev" title="解决hexo博客的Next主题busuanzi_count失效方法">
+                解决hexo博客的Next主题busuanzi_count失效方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -766,7 +769,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -880,7 +883,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Playground-教程"><span class="nav-number">1.</span> <span class="nav-text">Playground 教程:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍："><span class="nav-number">1.1.</span> <span class="nav-text">介绍：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标"><span class="nav-number">1.2.</span> <span class="nav-text">目标:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实践"><span class="nav-number">1.3.</span> <span class="nav-text">实践:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、使用Fabric搭建一个简单的网络："><span class="nav-number">1.3.1.</span> <span class="nav-text">一、使用Fabric搭建一个简单的网络：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、启动composer-playground："><span class="nav-number">1.3.2.</span> <span class="nav-text">二、启动composer-playground：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#编写一个智能合约代码："><span class="nav-number">1.3.2.1.</span> <span class="nav-text">编写一个智能合约代码：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、部署网络并且测试"><span class="nav-number">1.3.3.</span> <span class="nav-text">四、部署网络并且测试:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#沙盒部署："><span class="nav-number">1.3.3.1.</span> <span class="nav-text">沙盒部署：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#沙盒调试："><span class="nav-number">1.3.3.2.</span> <span class="nav-text">沙盒调试：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打包并且导出当前业务网络为-bna文件"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">打包并且导出当前业务网络为.bna文件:</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#区块链分类："><span class="nav-number">1.</span> <span class="nav-text">区块链分类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公有链："><span class="nav-number">1.1.</span> <span class="nav-text">公有链：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联盟链："><span class="nav-number">1.2.</span> <span class="nav-text">联盟链：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#私有链："><span class="nav-number">1.3.</span> <span class="nav-text">私有链：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共识算法分类："><span class="nav-number">2.</span> <span class="nav-text">共识算法分类：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、工作量证明（PoW）："><span class="nav-number">2.0.1.</span> <span class="nav-text">一、工作量证明（PoW）：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代表项目：比特币（BTC"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">代表项目：比特币（BTC)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、DPOS算法："><span class="nav-number">2.0.2.</span> <span class="nav-text">二、DPOS算法：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代表项目：EOS"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">代表项目：EOS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、消逝时间量证明POET："><span class="nav-number">2.0.3.</span> <span class="nav-text">三、消逝时间量证明POET：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代表项目：Hyperledger-Sawtooth"><span class="nav-number">2.0.3.1.</span> <span class="nav-text">代表项目：Hyperledger Sawtooth</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、股权证明机制POS："><span class="nav-number">2.0.4.</span> <span class="nav-text">四、股权证明机制POS：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代表项目：以太坊"><span class="nav-number">2.0.4.1.</span> <span class="nav-text">代表项目：以太坊</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设计初衷："><span class="nav-number">2.0.4.2.</span> <span class="nav-text">设计初衷：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、拜占庭容错PBFT："><span class="nav-number">2.0.5.</span> <span class="nav-text">五、拜占庭容错PBFT：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#代表项目：Hyperledger-Fabric"><span class="nav-number">2.0.5.1.</span> <span class="nav-text">代表项目：Hyperledger Fabric</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#五个概念："><span class="nav-number">2.0.5.2.</span> <span class="nav-text">五个概念：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四个阶段："><span class="nav-number">2.0.5.3.</span> <span class="nav-text">四个阶段：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、Hyperledger-Kafka-分布式队列-："><span class="nav-number">2.0.6.</span> <span class="nav-text">六、Hyperledger Kafka(分布式队列)：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#设计思路："><span class="nav-number">2.0.6.1.</span> <span class="nav-text">设计思路：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#kafka和orderer通讯流程："><span class="nav-number">2.0.6.2.</span> <span class="nav-text">kafka和orderer通讯流程：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#七、-Hyperledger-Solo-单节点排序"><span class="nav-number">2.0.7.</span> <span class="nav-text">七、 Hyperledger Solo(单节点排序):</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#solo-order的通信流程："><span class="nav-number">2.0.7.1.</span> <span class="nav-text">solo-order的通信流程：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -914,7 +917,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.6k</span>
+    <span title="Site words total count">16.5k</span>
   
 </div>
 
