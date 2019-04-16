@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.ywandy.top/"/>
-  <updated>2019-04-16T02:03:49.949Z</updated>
+  <updated>2019-04-16T02:10:02.021Z</updated>
   <id>https://blog.ywandy.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决centos的ssh链接慢问题</title>
+    <link href="https://blog.ywandy.top/%E8%A7%A3%E5%86%B3centos%E7%9A%84ssh%E9%93%BE%E6%8E%A5%E6%85%A2%E9%97%AE%E9%A2%98.html"/>
+    <id>https://blog.ywandy.top/解决centos的ssh链接慢问题.html</id>
+    <published>2019-04-16T02:07:39.000Z</published>
+    <updated>2019-04-16T02:10:02.021Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="以下提供2种解决思路："><a href="#以下提供2种解决思路：" class="headerlink" title="以下提供2种解决思路："></a>以下提供2种解决思路：</h3><h4 id="一、关闭dns反向解析-能达到显著的加速效果"><a href="#一、关闭dns反向解析-能达到显著的加速效果" class="headerlink" title="一、关闭dns反向解析(能达到显著的加速效果):"></a>一、关闭dns反向解析(能达到显著的加速效果):</h4><p>在linux中，默认开启了ssh反向dns解析，这个会消耗大量时间，</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vi /etc/ssh/sshd_config</span></span><br><span class="line">UseDNS=no</span><br></pre></td></tr></table></figure><h4 id="二、关闭server的gss认证"><a href="#二、关闭server的gss认证" class="headerlink" title="二、关闭server的gss认证:"></a>二、关闭server的gss认证:</h4><p>在authentication gssapi-with-mic有很大的可能出现问题，因此关闭GSS认证可以提高ssh连接速度。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vi /etc/ssh/sshd_config</span></span><br><span class="line">GSSAPIAuthentication no</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;以下提供2种解决思路：&quot;&gt;&lt;a href=&quot;#以下提供2种解决思路：&quot; class=&quot;headerlink&quot; title=&quot;以下提供2种解决思路：&quot;&gt;&lt;/a&gt;以下提供2种解决思路：&lt;/h3&gt;&lt;h4 id=&quot;一、关闭dns反向解析-能达到显著的加速效果&quot;&gt;&lt;a hr
+      
+    
+    </summary>
+    
+      <category term="技巧总结" scheme="https://blog.ywandy.top/categories/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="linux" scheme="https://blog.ywandy.top/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>kubernetes部署-多虚拟机部署</title>
